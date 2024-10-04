@@ -11,10 +11,12 @@ const AboutPage: React.FunctionComponent = (props) => {
     const startCamera = async () => {
       if (videoRef.current) {
         try {
-          const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+          const stream = await navigator.mediaDevices.getUserMedia({
+            video: true,
+          });
           videoRef.current.srcObject = stream;
         } catch (err) {
-          console.error('Lỗi khi mở camera:', err);
+          console.error("Lỗi khi mở camera:", err);
         }
       }
     };
@@ -33,13 +35,13 @@ const AboutPage: React.FunctionComponent = (props) => {
 
   const takePicture = () => {
     if (videoRef.current) {
-      const canvas = document.createElement('canvas');
-      const context = canvas.getContext('2d');
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
       if (context) {
         canvas.width = videoRef.current.videoWidth;
         canvas.height = videoRef.current.videoHeight;
         context.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
-        setImageSrc(canvas.toDataURL('image/png')); // Lưu ảnh thành base64
+        setImageSrc(canvas.toDataURL("image/png")); // Lưu ảnh thành base64
       }
     }
   };
@@ -48,13 +50,17 @@ const AboutPage: React.FunctionComponent = (props) => {
     <Page className="page">
       <div>
         <h2>Chụp ảnh CCCD</h2>
-        <video ref={videoRef} autoPlay style={{ width: '100%', height: 'auto' }} />
+        <video
+          ref={videoRef}
+          autoPlay
+          style={{ width: "100%", height: "auto" }}
+        />
         <button onClick={takePicture}>Chụp ảnh</button>
         {imageSrc && (
           <div>
             <h3>Ảnh đã chụp:</h3>
             <img src={imageSrc} alt="Chụp từ camera" />
-            <button >Gửi lên</button>
+            <button>Gửi lên</button>
           </div>
         )}
       </div>
