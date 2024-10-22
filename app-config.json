@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "EKYC TINO MINI APP",
+    "title": "Xác thực tài khoản",
     "headerTitle": "EKYC TINO MINI APP",
     "headerColor": "#1843EF",
     "textColor": "white",
@@ -10,11 +10,13 @@
     "statusBar": "normal",
     "actionBarHidden": false,
     "hideAndroidBottomNavigationBar": false,
-    "hideIOSSafeAreaBottom": false
+    "hideIOSSafeAreaBottom": false,
+    "selfControlLoading": false
   },
   "debug": false,
   "pages": [],
   "listCSS": [],
   "listSyncJS": [],
-  "listAsyncJS": []
+  "listAsyncJS": [],
+  "template": {}
 }

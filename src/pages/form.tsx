@@ -36,6 +36,39 @@ const FormPage: React.FunctionComponent = () => {
           </Box>
         </Box>
       </div>
+      {/* <Box className="flex items-center gap-x-5 gap-y-3">
+        <video
+          style={{ width: "50vw", height: "30vh" }}
+          ref={videoRef}
+          muted
+          playsInline
+          webkit-playsinline
+        />
+        {step === 1 && frontImage && (
+          <img
+            src={frontImage}
+            alt="Front Card"
+            style={{
+              width: "50vw",
+              height: "auto",
+              maxHeight: "30vh",
+              objectFit: "contain",
+            }}
+          />
+        )}
+        {step === 2 && backImage && (
+          <img
+            src={backImage}
+            alt="Back Card"
+            style={{
+              width: "50vw",
+              height: "auto",
+              maxHeight: "30vh",
+              objectFit: "contain",
+            }}
+          />
+        )}
+      </Box> */}
     </Page>
   );
 };
